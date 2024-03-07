@@ -14,11 +14,8 @@ public class Main {
             }
             N++;
         }
-        if((N % 100) < 10) {
-            System.out.println("0" + (N % 100));
-        } else {
-            System.out.println((N % 100));
-        }
+
+        System.out.printf("%02d", (N % 100));
     }
 
 }
