@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+SELECT NAME, DATETIME
+FROM ANIMAL_INS
+WHERE ANIMAL_ID NOT IN (SELECT ANIMAL_ID FROM ANIMAL_OUTS)
+ORDER BY DATETIME 
+LIMIT 3;
+
+-- animal_outs에 존재 x, datetime이 가장 오래 된 3개 출력
