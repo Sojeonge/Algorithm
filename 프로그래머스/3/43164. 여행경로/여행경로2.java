@@ -10,7 +10,7 @@ class Solution {
         dfs (0, "ICN", "ICN", tickets);
         
         Collections.sort(list); // sort() = 오름차순, reverse() = 내림차순
-        return list.get(0).split(" ");
+        return list.get(0).split(" "); // 배열 형태로 출력
     }
     
     static void dfs (int depth, String now, String path, String[][] tickets) {
