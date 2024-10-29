@@ -8,7 +8,7 @@ class Solution {
     static int result = 0;
     
     public int solution(int[][] rectangle, int characterX, int characterY, int itemX, int itemY) {
-        drawMap(rectangle);
+        drawMap(rectangle); // 테두리(1), 내부(2) 채우기
         
         bfs(characterX * 2, characterY * 2, itemX * 2, itemY * 2);
         
