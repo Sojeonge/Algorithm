@@ -20,7 +20,7 @@ class Solution {
         }
         
         for (int i = 0; i < tickets.length; i++) {
-            if (!useTickets[i] && now.equals(tickets[i][0])) {
+            if (!useTickets[i] && now.equals(tickets[i][0])) { // 문자열 => equals() 사용
                 useTickets[i] = true;
                 dfs (depth + 1, tickets[i][1], path + " " + tickets[i][1], tickets);
                 useTickets[i] = false;
