@@ -5,14 +5,35 @@ class Solution {
     static int[] dJ = {0, 0, 1, -1};
     static int[][] map = new int[101][101];
     static boolean[][] visited = new boolean[101][101];
-    static int answer = 0;
     
     public int solution(int[][] rectangle, int characterX, int characterY, int itemX, int itemY) {
         fills(rectangle);
+        Queue<int[]> queue = new LinkedList<>();
+        queue.add(new int[]{characterY * 2, characterX * 2, 0});
         
-        bfs (characterX * 2, characterY * 2, itemX * 2, itemY * 2);
-        
-        return answer;     
+        while (!queue.isEmpty()) {
+            int[] current = queue.poll();
+            int currentI = current[0];
+            int currentJ = current[1];
+            int stepCount = current[2];
+            
+            if (currentI == itemY * 2 && currentJ == itemX * 2) {
+                    return stepCount / 2;
+                }
+            
+            for (int i = 0; i < 4; i++) {
+                int nextI = currentI + dI[i];
+                int nextJ = currentJ + dJ[i];
+                
+                if (nextI > 0 && nextI < 101 && nextJ > 0 && nextJ < 101) {
+                    if (!visited[nextI][nextJ] && map[nextI][nextJ] == 1) {
+                        visited[nextI][nextJ] = true;
+                        queue.add(new int[]{nextI, nextJ, stepCount + 1});
+                    }
+                }
+            }
+        }
+        return 0;     
     }
     
     static void fills(int[][] rectangle) {
@@ -37,32 +58,4 @@ class Solution {
             }
         }
     }
-    
-     static void bfs (int characterX, int characterY, int itemX, int itemY) {
-         Queue<int[]> queue = new LinkedList<>();
-         queue.add(new int[]{characterY, characterX, 0});
-         
-         while (!queue.isEmpty()) {
-            int[] current = queue.poll();
-            int currentI = current[0];
-            int currentJ = current[1];
-            int stepCount = current[2];
-            
-            if (currentI == itemY && currentJ == itemX) {
-                    answer = stepCount / 2;
-                }
-            
-            for (int i = 0; i < 4; i++) {
-                int nextI = currentI + dI[i];
-                int nextJ = currentJ + dJ[i];
-                
-                if (nextI > 0 && nextI < 101 && nextJ > 0 && nextJ < 101) {
-                    if (!visited[nextI][nextJ] && map[nextI][nextJ] == 1) {
-                        visited[nextI][nextJ] = true;
-                        queue.add(new int[]{nextI, nextJ, stepCount + 1});
-                    }
-                }
-            }
-        }
-     }   
 }
