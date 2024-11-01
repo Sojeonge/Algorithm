@@ -14,6 +14,7 @@ class Solution {
             @Override
             public int compare(String a, String b) {
                 return (b + a).compareTo(a + b);
+                //오름차순 정렬 (o1+o2).compareTo(o1+o2);
             }
         });
         
