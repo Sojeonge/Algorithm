@@ -3,13 +3,13 @@ import java.util.*;
 class Solution {
     public String solution(int[] numbers) {
         String answer = "";
-        
         String[] arr = new String[numbers.length];
         
-        for(int i = 0; i < numbers.length; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             arr[i] = String.valueOf(numbers[i]);
         }
         
+        // 내림차순 정렬
         Arrays.sort(arr, new Comparator<String>() {
             @Override
             public int compare(String a, String b) {
@@ -17,12 +17,14 @@ class Solution {
             }
         });
         
-        if (arr[0].equals("0")) return "0";
+        // Arrays.sort(arr, (a, b) -> (b + a).compareTo(a + b));
+
+        if (arr[0].equals("0")) return "0"; // 모든 숫자가 0인 경우
         
         for (String num : arr) {
             answer += num;
         }
         
-     return answer;  
+        return answer;
     }
 }
