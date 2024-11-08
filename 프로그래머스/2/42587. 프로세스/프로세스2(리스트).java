@@ -13,7 +13,7 @@ class Solution {
             int[] current = queue.remove(0);
             boolean hasHigherPriority = false;
             
-            for (int i = 0; i < queue.size(); i++) {
+            for (int i = 0; i < queue.size(); i++) { // current 보다 큰 값 있는지 찾기
                 int[] q = queue.get(i);
                 if (q[1] > current[1]) {
                     queue.add(current);
