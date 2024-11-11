@@ -10,8 +10,8 @@ class Solution {
             queue.add(0);
         }
         
-        // if (bridge_length == 1) return truck_weights.length + 1;
-        // if (truck_weights.length == 1) return bridge_length + 1;
+        // if (bridge_length == 1) return truck_weights.length + 1; // 다리길이가 1일 때
+        // if (truck_weights.length == 1) return bridge_length + 1; // 트럭이 1대일 때
         
         int index = 0;
         
