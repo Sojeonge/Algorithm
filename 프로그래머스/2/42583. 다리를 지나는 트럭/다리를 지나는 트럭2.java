@@ -16,7 +16,7 @@ class Solution {
     }
     
     public int solution(int bridge_length, int weight, int[] truck_weights) {
-        Queue<Truck> waitQ = new LinkedList<>();
+        Queue<Truck> waitQ = new LinkedList<>(); // 타입 지정 (Truck)
         Queue<Truck> moveQ = new LinkedList<>();
         
         for (int t : truck_weights) {
