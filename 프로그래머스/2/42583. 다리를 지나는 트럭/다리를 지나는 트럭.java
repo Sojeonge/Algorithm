@@ -29,6 +29,23 @@ class Solution {
                 }
             }         
         }
+        // while(index < truck_weights.length) {
+        //     answer++;
+        //     totalWeight -= queue.poll();
+            
+        //     if (totalWeight + truck_weights[index] <= weight) {
+        //         queue.add(truck_weights[index]);
+        //         totalWeight += truck_weights[index];
+        //         index++;
+        //     } else {
+        //         queue.add(0);
+        //     }
+        // }
+        // answer+= bridge_length;
+        
+        // return answer;
+
+        
         return answer;
     }
 }
