@@ -3,20 +3,20 @@ import java.util.*;
 class Solution {
     public int solution(int[] priorities, int location) {
         int answer = 0;
-        List<int[]> queue = new LinkedList<>();
+        List<int[]> list = new LinkedList<>();
         
         for (int i = 0; i < priorities.length; i++) {
-            queue.add(new int[]{i, priorities[i]});
+            list.add(new int[]{i, priorities[i]});
         }
         
-        while (!queue.isEmpty()) {
-            int[] current = queue.remove(0); 
+        while (!list.isEmpty()) {
+            int[] current = list.remove(0);
             boolean hasHigherPriority = false;
             
-            for (int i = 0; i < queue.size(); i++) { // current 보다 큰 값 있는지 찾기
-                int[] q = queue.get(i);
-                if (q[1] > current[1]) {
-                    queue.add(current);
+            for (int i = 0; i < list.size(); i++) {
+                int[] q = list.get(i);
+                if (current[1] < q[1]) {
+                    list.add(current);
                     hasHigherPriority = true;
                     break;
                 }
@@ -26,11 +26,10 @@ class Solution {
                 answer++;
                 if (current[0] == location) {
                     return answer;
-                } 
+                }
             }
-                 
         }
-         
+        
         return answer;
     }
 }
