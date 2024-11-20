@@ -10,7 +10,7 @@ class Solution {
         }
         
         while (!queue.isEmpty()) {
-            int[] current = queue.remove(0); // poll() 불가능! -> List 타입이라서
+            int[] current = queue.remove(0); 
             boolean hasHigherPriority = false;
             
             for (int i = 0; i < queue.size(); i++) { // current 보다 큰 값 있는지 찾기
