@@ -79,6 +79,15 @@ public class Main {
             t.createNode(root, left, right);
         }
 
+        // for (int i = 0; i < n; i++) {
+        //     String[] tokens = br.readLine().split(" ");
+        //     char root = tokens[0].charAt(0);
+        //     char left = tokens[1].charAt(0);
+        //     char right = tokens[2].charAt(0);
+
+        //     t.createNode(root, left, right);
+        // }
+
         t.preOrder(t.root);
         System.out.println();
         t.inOrder(t.root);
