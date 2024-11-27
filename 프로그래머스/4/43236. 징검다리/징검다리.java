@@ -2,7 +2,6 @@ import java.util.*;
 
 class Solution {
     public int solution(int distance, int[] rocks, int n) {
-        // 바위 배열을 정렬합니다.
         Arrays.sort(rocks);
         
         // 이진 탐색의 시작점과 끝점을 설정합니다.
