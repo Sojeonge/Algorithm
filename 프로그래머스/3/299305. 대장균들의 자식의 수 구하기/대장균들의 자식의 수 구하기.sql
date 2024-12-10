@@ -1,4 +1,3 @@
--- 코드를 작성해주세요
 SELECT
     A.ID
     , COALESCE(B.COUNT, 0) AS CHILD_COUNT
