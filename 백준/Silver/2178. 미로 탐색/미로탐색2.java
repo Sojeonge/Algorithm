@@ -7,9 +7,14 @@ public class Main {
   static int[] dy = {0, 0, -1, 1};
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    String[] str = br.readLine().split(" ");
-    int n = Integer.parseInt(str[0]);
-    int m = Integer.parseInt(str[1]);
+    StringTokenizer st = new StringTokenizer(br.readLine());
+
+    int n = Integer.parseInt(st.nextToken());
+    int m = Integer.parseInt(st.nextToken());
+    
+    // String[] str = br.readLine().split(" ");
+    // int n = Integer.parseInt(str[0]);
+    // int m = Integer.parseInt(str[1]);
 
     map = new int[n][m];
     for (int i = 0; i < n; i++) {
