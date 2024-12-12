@@ -43,7 +43,7 @@ public class Main {
 
         visited[nx][ny] = true;
         queue.add(new int[] {nx, ny});
-        map[nx][ny] = map[nowX][nowY] + 1;
+        map[nx][ny] = map[nowX][nowY] + 1; // 최단거리로 카운팅
       }
     }
 
