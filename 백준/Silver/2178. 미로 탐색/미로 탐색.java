@@ -48,10 +48,8 @@ public class Main {
 				int nextX = nowX + dx[i];
 				int nextY = nowY + dy[i];
 				
-		                if (nextX < 0 || nextY < 0 || nextX >= n || nextY >= m)
+		                if (nextX < 0 || nextY < 0 || nextX >= n || nextY >= m || visited[nextX][nextY] || map[nextX][nextY] == 0)
                 		    continue;
-        		        if (visited[nextX][nextY] || map[nextX][nextY] == 0)
-                    		continue;
                     
 		                q.add(new int[] {nextX, nextY});
         		        map[nextX][nextY] = map[nowX][nowY] + 1;
