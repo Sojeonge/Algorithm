@@ -41,7 +41,6 @@ public class Main {
 	
 	static int Paint_cost(int N, int color) {
 		
-		// 만약 탐색하지 않은 배열이라면
 		if(DP[N][color] == 0) {
 			
 			// color의 색에 따라 이전 집의 서로 다른 색을 재귀호출하여 최솟값과 현재 집의 비용을 더해서 DP에 저장한다
