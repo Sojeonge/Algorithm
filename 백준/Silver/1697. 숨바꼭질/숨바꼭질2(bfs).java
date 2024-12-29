@@ -16,8 +16,8 @@ public class Main {
     time = new int[100_001];
 
     bfs();
-    System.out.println(time[K]);
-    System.out.println(cnt);
+    System.out.println(time[K]); // 최단 경로 구하기
+    System.out.println(cnt); // 가지 수
 
   }
 
