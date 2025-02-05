@@ -12,7 +12,7 @@ public class Main {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     N = Integer.parseInt(br.readLine());
 
-    System.out.println(bfs(N)); // BFS <<<<< DP (입력값이 클수도 있기 때문에)
+    System.out.println(bfs(N)); // 사실 DP로 푸는게 맞음..
  
   }
 
