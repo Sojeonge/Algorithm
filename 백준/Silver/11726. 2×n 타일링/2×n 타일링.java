@@ -7,7 +7,7 @@ public class Main {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     int n = Integer.parseInt(br.readLine());
-    if (n == 1) {
+    if (n == 1) { // ArrayIndexOutOfBoundsException(배열 인덱스 오류)
       System.out.println(1);
       return;
     }
