@@ -22,6 +22,8 @@ public class Main {
     for (int i = 1; i <= n + 1; i++) {
       if (max < dp[i])
         max = dp[i];
+      
+      //max = Math.max(max, dp[i]);  // 한 줄로 정리
 
       int next = i + arr[i][0];
       int cost = arr[i][1];
