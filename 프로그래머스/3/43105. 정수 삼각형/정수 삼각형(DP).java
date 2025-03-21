@@ -14,6 +14,7 @@ class Solution {
                 int left = dp[i - 1][j - 1] + triangle[i][j];
                 int right = dp[i - 1][j] + triangle[i][j];
                 dp[i][j] = Math.max(left, right);      
+                // dp[i][j] = Math.max(dp[i - 1][j - 1], dp[i - 1][j]) + triangle[i][j];
             }
         }
         
