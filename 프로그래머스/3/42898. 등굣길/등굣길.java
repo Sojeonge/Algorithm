@@ -21,7 +21,7 @@ class Solution {
                     dp[i][j] += dp[i][j - 1]; // 왼쪽에서
                 }
                 
-                dp[i][j] %= mod;
+                dp[i][j] %= mod; // 수가 커지는 것을 대비해 미리 나눠주기
             }
         }
         
