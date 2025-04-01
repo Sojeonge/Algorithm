@@ -28,5 +28,12 @@ class Solution {
         }
     
         return list.stream().mapToInt(i->i).toArray();
+
+        // int[] result = new int[list.size()];
+        // for (int i = 0; i < list.size(); i++) {
+        //     result[i] = list.get(i);
+        // }
+    
+        // return result;
     }
 }
