@@ -30,7 +30,7 @@ public class Main {
   }
 
   private static void dfs(int n) {
-    System.out.println("dfs(" + n + ") called"); // 재귀호출
+    System.out.println("dfs(" + n + ") called"); // 재귀호출 순서
     
     for (int i = 1; i < computers.length; i++) {
       if (computers[n][i] == 1 && !visited[i]) {
