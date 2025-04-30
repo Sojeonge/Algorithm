@@ -33,6 +33,16 @@ public class Main {
       return;
     }
 
+    // System.out.print() 바로 사용하기, StringBuilder 사용 x
+    // if (depth == M) {
+    //   for (int i = 0; i < M; i++) {
+    //     System.out.print(arr[i]);
+    //     if (i != M - 1) System.out.print(" ");
+    //   }
+    //   System.out.println();
+    //   return;
+    // }
+
     for (int i = 1; i <= N; i++) {
       if (!visited[i]) {
         visited[i] = true;
