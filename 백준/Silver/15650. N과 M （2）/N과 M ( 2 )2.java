@@ -5,6 +5,7 @@ public class Main {
 
   static int N, M;
   static int[] arr;
+  static boolean[] visited;
 
   public static void main(String[] args) throws IOException{
 
@@ -15,6 +16,7 @@ public class Main {
     M = Integer.parseInt(st.nextToken());
 
     arr = new int[M];
+    visited = new boolean[N + 1];
 
     dfs(1, 0);
   }
@@ -31,10 +33,13 @@ public class Main {
     }
 
     for (int i = start; i <= N; i++) {
-
-      arr[depth] = i;
-      dfs(i + 1, depth + 1);
-
+      
+      if (!visited[i]) {
+        visited[i] = true;
+        arr[depth] = i;
+        dfs(i + 1, depth + 1);
+        visited[i] = false;
+      }
     }
   }
 }
