@@ -1,15 +1,15 @@
--- 코드를 입력하세요
-with cte as
-(
-select SHIPMENT_ID,flavor,total_order
-from FIRST_HALF 
-union
-select SHIPMENT_ID,flavor,total_order
-from july
+select flavor 
+from (
+SELECT FLAVOR, SUM(TOTAL_ORDER) AS SUM
+FROM
+(SELECT SHIPMENT_ID, FLAVOR, TOTAL_ORDER
+FROM FIRST_HALF 
+UNION ALL
+SELECT SHIPMENT_ID, FLAVOR, TOTAL_ORDER
+FROM JULY) A
+GROUP BY FLAVOR 
+order by sum desc) result
+where rownum <= 3
 
-)
-select cte.flavor 
-from cte
-group by cte.flavor
-order by sum(cte.TOTAL_ORDER) desc
-limit 3
+
+
